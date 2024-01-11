@@ -13,4 +13,13 @@ router.get('',(req,res)=>{
     }
 })
 
+router.get('/data',(req,res)=>{
+    try{
+        res.json({profession:"trainer",specializations:sportsArr})
+    }
+    catch(err){
+        res.status(400).json('ERROR')
+    }
+})
+
 module.exports = router;
