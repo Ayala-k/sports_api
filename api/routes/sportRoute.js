@@ -9,7 +9,7 @@ router.get('',(req,res)=>{
         res.json({data:sportsArr,code:0})
     }
     catch(err){
-        res.status(400).json({'ERROR',code:101})
+        res.status(400).json({data:'ERROR',code:101})
     }
 })
 
@@ -18,7 +18,7 @@ router.get('/data',(req,res)=>{
         res.json({data:{profession:"trainer",specializations:sportsArr},code:0})
     }
     catch(err){
-        res.status(400).json({'ERROR',code:101})
+        res.status(400).json({data:'ERROR',code:101})
     }
 })
 
