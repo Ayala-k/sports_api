@@ -6,19 +6,19 @@ const router = express.Router();
 
 router.get('',(req,res)=>{
     try{
-        res.json(sportsArr)
+        res.json({data:sportsArr,code:0})
     }
     catch(err){
-        res.status(400).json('ERROR')
+        res.status(400).json({'ERROR',code:101})
     }
 })
 
 router.get('/data',(req,res)=>{
     try{
-        res.json({profession:"trainer",specializations:sportsArr})
+        res.json({data:{profession:"trainer",specializations:sportsArr},code:0})
     }
     catch(err){
-        res.status(400).json('ERROR')
+        res.status(400).json({'ERROR',code:101})
     }
 })
 
